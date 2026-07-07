@@ -1,4 +1,4 @@
-# EDMPrompt: Efficient Dynamic Memory Prompt for Anomaly Detection
+# EDMPrompt: Towards Efffcient Generation of DiscriminativeMulti-Prompt Features for Zero-Shot Anomaly Detection
 
 <div align="center">
 
