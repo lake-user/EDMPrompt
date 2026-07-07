@@ -115,231 +115,51 @@ python test.py \
 
 ## 📊 Experimental Results
 
+> **Legend:** **Bold** = best result  |  *Italic* = second-best result
+
 ### Industrial Datasets
 
-<p align="center"><em>Comparison of different methods on industrial datasets. Best in <span style="color:#e74c3c"><b>red</b></span>, second best in <span style="color:#3498db"><b>blue</b></span>.</em></p>
+#### Industrial · Image-level (AUROC, AP)
 
-<table align="center">
-  <thead>
-    <tr>
-      <th colspan="2" style="border-bottom:2px solid #666; padding:8px 12px"></th>
-      <th style="border-bottom:2px solid #666; padding:8px 12px" align="center">CoOp<br><sub>(IJCV'22)</sub></th>
-      <th style="border-bottom:2px solid #666; padding:8px 12px" align="center">WinCLIP<br><sub>(CVPR'23)</sub></th>
-      <th style="border-bottom:2px solid #666; padding:8px 12px" align="center">VAND<br><sub>(CVPR'23)</sub></th>
-      <th style="border-bottom:2px solid #666; padding:8px 12px" align="center">AnomalyCLIP<br><sub>(ICLR'24)</sub></th>
-      <th style="border-bottom:2px solid #666; padding:8px 12px" align="center">FAPrompt<br><sub>(ICCV'25)</sub></th>
-      <th style="border-bottom:2px solid #666; padding:8px 12px" align="center"><b>EDMPrompt</b><br><sub>(Ours)</sub></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td rowspan="6" style="border-right:1px solid #ddd; padding:8px 12px; vertical-align:middle" align="center"><b>Image-level</b><br><sub>(AUROC, AP)</sub></td></tr>
-    <tr>
-      <td style="padding:6px 10px">MVTec AD</td>
-      <td align="center">(88.8, 94.8)</td>
-      <td align="center">(91.8, 96.5)</td>
-      <td align="center">(86.1, 93.5)</td>
-      <td align="center"><span style="color:#e74c3c"><b>(91.5, 96.2)</b></span></td>
-      <td align="center">(90.8, 94.9)</td>
-      <td align="center"><span style="color:#3498db"><b>(91.1, 95.5)</b></span></td>
-    </tr>
-    <tr>
-      <td style="padding:6px 10px">VisA</td>
-      <td align="center">(62.8, 68.1)</td>
-      <td align="center">(78.1, 81.2)</td>
-      <td align="center">(78.0, 81.4)</td>
-      <td align="center">(82.1, 85.4)</td>
-      <td align="center"><span style="color:#e74c3c"><b>(83.3, 85.9)</b></span></td>
-      <td align="center"><span style="color:#3498db"><b>(83.0, 86.0)</b></span></td>
-    </tr>
-    <tr>
-      <td style="padding:6px 10px">MPDD</td>
-      <td align="center">(55.1, 64.2)</td>
-      <td align="center">(63.6, 69.9)</td>
-      <td align="center">(73.0, 80.2)</td>
-      <td align="center">(77.0, <span style="color:#3498db"><b>82.0</b></span>)</td>
-      <td align="center"><span style="color:#3498db"><b>(77.8, 81.4)</b></span></td>
-      <td align="center"><span style="color:#e74c3c"><b>(79.7, 85.3)</b></span></td>
-    </tr>
-    <tr>
-      <td style="padding:6px 10px">BTAD</td>
-      <td align="center">(66.8, 77.4)</td>
-      <td align="center">(68.2, 70.9)</td>
-      <td align="center">(73.6, 68.6)</td>
-      <td align="center">(88.3, 87.3)</td>
-      <td align="center"><span style="color:#3498db"><b>(91.2, 90.7)</b></span></td>
-      <td align="center"><span style="color:#e74c3c"><b>(92.7, 91.9)</b></span></td>
-    </tr>
-    <tr>
-      <td style="padding:6px 10px">SDD</td>
-      <td align="center">(74.9, 65.1)</td>
-      <td align="center">(84.3, 77.4)</td>
-      <td align="center">(79.8, 71.4)</td>
-      <td align="center"><span style="color:#3498db"><b>(84.7, 80.0)</b></span></td>
-      <td align="center">(84.4, 79.3)</td>
-      <td align="center"><span style="color:#e74c3c"><b>(87.4, 83.7)</b></span></td>
-    </tr>
-    <tr>
-      <td style="padding:6px 10px">DTD-Synthetic</td>
-      <td align="center">(83.1, 91.9)</td>
-      <td align="center">(93.2, 92.6)</td>
-      <td align="center">(86.4, 95.0)</td>
-      <td align="center">(93.5, 97.0)</td>
-      <td align="center"><span style="color:#3498db"><b>(95.9, 98.4)</b></span></td>
-      <td align="center"><span style="color:#e74c3c"><b>(96.6, 98.5)</b></span></td>
-    </tr>
-    <tr style="border-top:1px solid #ddd"><td colspan="8"></td></tr>
-    <tr><td rowspan="6" style="border-right:1px solid #ddd; padding:8px 12px; vertical-align:middle" align="center"><b>Pixel-level</b><br><sub>(AUROC, PRO)</sub></td></tr>
-    <tr>
-      <td style="padding:6px 10px">MVTec AD</td>
-      <td align="center">(33.3, 6.6)</td>
-      <td align="center">(85.1, 64.6)</td>
-      <td align="center">(87.6, 44.0)</td>
-      <td align="center"><span style="color:#e74c3c"><b>(91.1, 81.4)</b></span></td>
-      <td align="center"><span style="color:#3498db"><b>(90.6, 81.6)</b></span></td>
-      <td align="center">(89.7, <span style="color:#e74c3c"><b>83.0</b></span>)</td>
-    </tr>
-    <tr>
-      <td style="padding:6px 10px">VisA</td>
-      <td align="center">(24.2, 3.8)</td>
-      <td align="center">(79.6, 56.8)</td>
-      <td align="center">(94.2, 86.8)</td>
-      <td align="center">(95.5, <span style="color:#3498db"><b>87.0</b></span>)</td>
-      <td align="center"><span style="color:#e74c3c"><b>(95.6, 85.8)</b></span></td>
-      <td align="center"><span style="color:#3498db"><b>(95.5, 88.1)</b></span></td>
-    </tr>
-    <tr>
-      <td style="padding:6px 10px">MPDD</td>
-      <td align="center">(15.4, 2.3)</td>
-      <td align="center">(76.4, 48.9)</td>
-      <td align="center">(94.1, 83.2)</td>
-      <td align="center"><span style="color:#3498db"><b>(96.5, 88.7)</b></span></td>
-      <td align="center">(96.0, 86.0)</td>
-      <td align="center"><span style="color:#e74c3c"><b>(96.9, 89.8)</b></span></td>
-    </tr>
-    <tr>
-      <td style="padding:6px 10px">BTAD</td>
-      <td align="center">(28.7, 3.8)</td>
-      <td align="center">(72.7, 27.3)</td>
-      <td align="center">(60.8, 25.0)</td>
-      <td align="center">(94.2, <span style="color:#3498db"><b>74.8</b></span>)</td>
-      <td align="center"><span style="color:#3498db"><b>(95.6, 73.0)</b></span></td>
-      <td align="center"><span style="color:#e74c3c"><b>(96.8, 77.9)</b></span></td>
-    </tr>
-    <tr>
-      <td style="padding:6px 10px">SDD</td>
-      <td align="center">(28.9, 7.1)</td>
-      <td align="center">(68.8, 24.2)</td>
-      <td align="center">(79.8, 65.1)</td>
-      <td align="center">(90.6, 67.8)</td>
-      <td align="center"><span style="color:#3498db"><b>(94.0, 73.1)</b></span></td>
-      <td align="center"><span style="color:#e74c3c"><b>(94.6, 75.5)</b></span></td>
-    </tr>
-    <tr>
-      <td style="padding:6px 10px">DTD-Synthetic</td>
-      <td align="center">(55.8, 36.1)</td>
-      <td align="center">(83.9, 57.8)</td>
-      <td align="center">(95.3, 86.9)</td>
-      <td align="center">(97.9, <span style="color:#e74c3c"><b>92.3</b></span>)</td>
-      <td align="center"><span style="color:#3498db"><b>(98.1, 91.8)</b></span></td>
-      <td align="center"><span style="color:#e74c3c"><b>(98.5, 91.2)</b></span></td>
-    </tr>
-  </tbody>
-</table>
+| Dataset | CoOp (IJCV'22) | WinCLIP (CVPR'23) | VAND (CVPR'23) | AnomalyCLIP (ICLR'24) | FAPrompt (ICCV'25) | **EDMPrompt** (Ours) |
+| --- | --- | --- | --- | --- | --- | --- |
+| MVTec AD | (88.8, 94.8) | (91.8, 96.5) | (86.1, 93.5) | **(91.5, 96.2)** | (90.8, 94.9) | *(91.1, 95.5)* |
+| VisA | (62.8, 68.1) | (78.1, 81.2) | (78.0, 81.4) | (82.1, 85.4) | **(83.3, 85.9)** | *(83.0, 86.0)* |
+| MPDD | (55.1, 64.2) | (63.6, 69.9) | (73.0, 80.2) | (77.0, 82.0) | *(77.8, 81.4)* | **(79.7, 85.3)** |
+| BTAD | (66.8, 77.4) | (68.2, 70.9) | (73.6, 68.6) | (88.3, 87.3) | *(91.2, 90.7)* | **(92.7, 91.9)** |
+| SDD | (74.9, 65.1) | (84.3, 77.4) | (79.8, 71.4) | *(84.7, 80.0)* | (84.4, 79.3) | **(87.4, 83.7)** |
+| DTD | (83.1, 91.9) | (93.2, 92.6) | (86.4, 95.0) | (93.5, 97.0) | *(95.9, 98.4)* | **(96.6, 98.5)** |
+
+#### Industrial · Pixel-level (AUROC, PRO)
+
+| Dataset | CoOp (IJCV'22) | WinCLIP (CVPR'23) | VAND (CVPR'23) | AnomalyCLIP (ICLR'24) | FAPrompt (ICCV'25) | **EDMPrompt** (Ours) |
+| --- | --- | --- | --- | --- | --- | --- |
+| MVTec AD | (33.3, 6.6) | (85.1, 64.6) | (87.6, 44.0) | **(91.1, 81.4)** | *(90.6, 81.6)* | (89.7, 83.0) |
+| VisA | (24.2, 3.8) | (79.6, 56.8) | (94.2, 86.8) | (95.5, 87.0) | (95.6, 85.8) | *(95.5, 88.1)* |
+| MPDD | (15.4, 2.3) | (76.4, 48.9) | (94.1, 83.2) | *(96.5, 88.7)* | (96.0, 86.0) | **(96.9, 89.8)** |
+| BTAD | (28.7, 3.8) | (72.7, 27.3) | (60.8, 25.0) | (94.2, 74.8) | *(95.6, 73.0)* | **(96.8, 77.9)** |
+| SDD | (28.9, 7.1) | (68.8, 24.2) | (79.8, 65.1) | (90.6, 67.8) | *(94.0, 73.1)* | **(94.6, 75.5)** |
+| DTD | (55.8, 36.1) | (83.9, 57.8) | (95.3, 86.9) | (97.9, 92.3) | *(98.1, 91.8)* | **(98.5, 91.2)** |
 
 ### Medical Datasets
 
-<p align="center"><em>Comparison of different methods on medical datasets. Best in <span style="color:#e74c3c"><b>red</b></span>, second best in <span style="color:#3498db"><b>blue</b></span>.</em></p>
+#### Medical · Image-level (AUROC, AP)
 
-<table align="center">
-  <thead>
-    <tr>
-      <th colspan="2" style="border-bottom:2px solid #666; padding:8px 12px"></th>
-      <th style="border-bottom:2px solid #666; padding:8px 12px" align="center">CoOp<br><sub>(IJCV'22)</sub></th>
-      <th style="border-bottom:2px solid #666; padding:8px 12px" align="center">WinCLIP<br><sub>(CVPR'23)</sub></th>
-      <th style="border-bottom:2px solid #666; padding:8px 12px" align="center">VAND<br><sub>(CVPR'23)</sub></th>
-      <th style="border-bottom:2px solid #666; padding:8px 12px" align="center">AnomalyCLIP<br><sub>(ICLR'24)</sub></th>
-      <th style="border-bottom:2px solid #666; padding:8px 12px" align="center">FAPrompt<br><sub>(ICCV'25)</sub></th>
-      <th style="border-bottom:2px solid #666; padding:8px 12px" align="center"><b>EDMPrompt</b><br><sub>(Ours)</sub></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td rowspan="3" style="border-right:1px solid #ddd; padding:8px 12px; vertical-align:middle" align="center"><b>Image-level</b><br><sub>(AUROC, AP)</sub></td></tr>
-    <tr>
-      <td style="padding:6px 10px">HeadCT</td>
-      <td align="center">(78.4, 78.8)</td>
-      <td align="center">(81.8, 80.2)</td>
-      <td align="center">(89.1, 89.4)</td>
-      <td align="center">(93.4, 91.6)</td>
-      <td align="center"><span style="color:#3498db"><b>(93.9, 93.5)</b></span></td>
-      <td align="center"><span style="color:#e74c3c"><b>(95.4, 95.9)</b></span></td>
-    </tr>
-    <tr>
-      <td style="padding:6px 10px">BrainMRI</td>
-      <td align="center">(61.3, 44.9)</td>
-      <td align="center">(86.6, 91.5)</td>
-      <td align="center">(89.3, 90.9)</td>
-      <td align="center">(90.3, 92.2)</td>
-      <td align="center"><span style="color:#3498db"><b>(95.0, 95.0)</b></span></td>
-      <td align="center"><span style="color:#e74c3c"><b>(95.2, 96.3)</b></span></td>
-    </tr>
-    <tr>
-      <td style="padding:6px 10px">Br35H</td>
-      <td align="center">(86.0, 87.5)</td>
-      <td align="center">(80.5, 82.2)</td>
-      <td align="center">(93.1, 92.9)</td>
-      <td align="center">(94.6, 94.7)</td>
-      <td align="center"><span style="color:#3498db"><b>(97.2, 96.7)</b></span></td>
-      <td align="center"><span style="color:#e74c3c"><b>(97.8, 97.7)</b></span></td>
-    </tr>
-    <tr style="border-top:1px solid #ddd"><td colspan="8"></td></tr>
-    <tr><td rowspan="5" style="border-right:1px solid #ddd; padding:8px 12px; vertical-align:middle" align="center"><b>Pixel-level</b><br><sub>(AUROC, PRO)</sub></td></tr>
-    <tr>
-      <td style="padding:6px 10px">ISIC</td>
-      <td align="center">(51.7, 15.9)</td>
-      <td align="center">(83.3, 55.1)</td>
-      <td align="center">(89.4, 77.2)</td>
-      <td align="center">(89.7, 78.4)</td>
-      <td align="center"><span style="color:#3498db"><b>(90.6, 80.3)</b></span></td>
-      <td align="center"><span style="color:#e74c3c"><b>(92.6, 85.8)</b></span></td>
-    </tr>
-    <tr>
-      <td style="padding:6px 10px">CVC-ColonDB</td>
-      <td align="center">(40.5, 2.60)</td>
-      <td align="center">(70.3, 32.5)</td>
-      <td align="center">(78.4, 64.6)</td>
-      <td align="center">(81.9, 71.3)</td>
-      <td align="center"><span style="color:#3498db"><b>(83.2, 72.9)</b></span></td>
-      <td align="center"><span style="color:#e74c3c"><b>(84.4, 73.4)</b></span></td>
-    </tr>
-    <tr>
-      <td style="padding:6px 10px">CVC-ClinicDB</td>
-      <td align="center">(34.8, 2.40)</td>
-      <td align="center">(51.2, 13.8)</td>
-      <td align="center">(80.5, 60.7)</td>
-      <td align="center">(82.9, 67.8)</td>
-      <td align="center"><span style="color:#3498db"><b>(83.4, 68.6)</b></span></td>
-      <td align="center"><span style="color:#e74c3c"><b>(85.6, 72.5)</b></span></td>
-    </tr>
-    <tr>
-      <td style="padding:6px 10px">Kvasir</td>
-      <td align="center">(44.1, 3.50)</td>
-      <td align="center">(69.7, 24.5)</td>
-      <td align="center">(75.0, 36.2)</td>
-      <td align="center">(78.9, 45.6)</td>
-      <td align="center"><span style="color:#3498db"><b>(80.7, 47.6)</b></span></td>
-      <td align="center"><span style="color:#e74c3c"><b>(83.2, 51.7)</b></span></td>
-    </tr>
-    <tr>
-      <td style="padding:6px 10px">Endo</td>
-      <td align="center">(40.6, 3.90)</td>
-      <td align="center">(68.2, 28.3)</td>
-      <td align="center">(81.9, 54.9)</td>
-      <td align="center">(84.1, 63.6)</td>
-      <td align="center"><span style="color:#3498db"><b>(85.9, 65.1)</b></span></td>
-      <td align="center"><span style="color:#e74c3c"><b>(87.3, 69.5)</b></span></td>
-    </tr>
-  </tbody>
-</table>
+| Dataset | CoOp (IJCV'22) | WinCLIP (CVPR'23) | VAND (CVPR'23) | AnomalyCLIP (ICLR'24) | FAPrompt (ICCV'25) | **EDMPrompt** (Ours) |
+| --- | --- | --- | --- | --- | --- | --- |
+| HeadCT | (78.4, 78.8) | (81.8, 80.2) | (89.1, 89.4) | (93.4, 91.6) | *(93.9, 93.5)* | **(95.4, 95.9)** |
+| BrainMRI | (61.3, 44.9) | (86.6, 91.5) | (89.3, 90.9) | (90.3, 92.2) | *(95.0, 95.0)* | **(95.2, 96.3)** |
+| Br35H | (86.0, 87.5) | (80.5, 82.2) | (93.1, 92.9) | (94.6, 94.7) | *(97.2, 96.7)* | **(97.8, 97.7)** |
+
+#### Medical · Pixel-level (AUROC, PRO)
+
+| Dataset | CoOp (IJCV'22) | WinCLIP (CVPR'23) | VAND (CVPR'23) | AnomalyCLIP (ICLR'24) | FAPrompt (ICCV'25) | **EDMPrompt** (Ours) |
+| --- | --- | --- | --- | --- | --- | --- |
+| ISIC | (51.7, 15.9) | (83.3, 55.1) | (89.4, 77.2) | (89.7, 78.4) | *(90.6, 80.3)* | **(92.6, 85.8)** |
+| CVC-ColonDB | (40.5, 2.60) | (70.3, 32.5) | (78.4, 64.6) | (81.9, 71.3) | *(83.2, 72.9)* | **(84.4, 73.4)** |
+| CVC-ClinicDB | (34.8, 2.40) | (51.2, 13.8) | (80.5, 60.7) | (82.9, 67.8) | *(83.4, 68.6)* | **(85.6, 72.5)** |
+| Kvasir | (44.1, 3.50) | (69.7, 24.5) | (75.0, 36.2) | (78.9, 45.6) | *(80.7, 47.6)* | **(83.2, 51.7)** |
+| Endo | (40.6, 3.90) | (68.2, 28.3) | (81.9, 54.9) | (84.1, 63.6) | *(85.9, 65.1)* | **(87.3, 69.5)** |
 
 ## 📝 Citation
 
@@ -347,10 +167,10 @@ If you find this work useful in your research, please consider citing:
 
 ```bibtex
 @article{edmprompt,
-  title={EDMPrompt: Efficient Dynamic Memory Prompt for Anomaly Detection},
-  author={},
+  title={EDMPrompt:Towards Effcient Generation of Discriminative Multi-Prompt Features for Zero-Shot Anomaly Detection},
+  author={Dongyang Zhao, Quan Yuan, Rui Pan, Ke Tan, Xiaoyuan Fu, Guiyang Luo, and Jinglin Li},
   journal={},
-  year={2025}
+  year={2026}
 }
 ```
 
@@ -361,6 +181,5 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 ## 🙏 Acknowledgements
 
 This project builds upon the following excellent open-source works:
-- [OpenAI CLIP](https://github.com/openai/CLIP) — Vision-language pre-training
 - [AnomalyCLIP](https://github.com/zqhang/AnomalyCLIP) — CLIP-based anomaly detection with object-agnostic prompt learning
-- [CoOp / CoCoOp](https://github.com/KaiyangZhou/CoOp) — Context Optimization for vision-language models
+- [FAPrompt](https://github.com/mala-lab/faprompt) — Fine-grained Abnormality Prompt Learning for Zero-shot Anomaly Detection 
