@@ -1,4 +1,4 @@
-# EDMPrompt: Towards Efffcient Generation of DiscriminativeMulti-Prompt Features for Zero-Shot Anomaly Detection
+# EDMPrompt: Towards Efffcient Generation of Discriminative Multi-Prompt Features for Zero-Shot Anomaly Detection
 
 <div align="center">
 
@@ -21,6 +21,10 @@
 - 📊 **Comprehensive Evaluation** — Supports image-level, pixel-level, and joint metrics (AUROC, AP, AUPRO) across 14 datasets
 - 🏭 **Industrial & Medical Coverage** — Out-of-the-box support for MVTec AD, VisA, BTAD, MPDD, SDD, DTD, and multiple medical imaging benchmarks
 
+
+<p align="center">
+  <img src="frame.png" alt="EDMPrompt Framework" width="90%">
+</p>
 
 ## 📦 Supported Datasets
 
